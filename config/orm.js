@@ -1,4 +1,4 @@
-var connection = require("./connection.js")
+var connection = require("./connection.js");
 
 // function printQuestionMarks(num) {
 //   var arr = [];
@@ -27,10 +27,10 @@ var orm = {
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             cb(result);
-        })
+        });
     },
     insertOne: function(table, burger_name, cb) {
-        var queryString = "INSERT INTO " + table + "(burger_name) VALUES (" + burger_name + ")"
+        var queryString = "INSERT INTO " + table + "(burger_name) VALUES (" + burger_name + ")";
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             cb(result);

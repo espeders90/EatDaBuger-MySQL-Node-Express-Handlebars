@@ -1,10 +1,8 @@
 var express = require("express");
 
 var burger = require("../models/burgers.js");
-
-var router = express.Router();
 //Create Router
-
+var router = express.Router();
 router.get("/", function(req, res) {
     res.redirect("/burgers");
 });
@@ -33,6 +31,7 @@ router.put("/burgers/update/:id", function(req, res) {
         res.redirect("/burgers");
     });
 });
+
 module.exports = router;
 
 
